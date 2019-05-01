@@ -18,11 +18,11 @@
     </constructor>
   </resultMap>
   <sql id="Base_Column_List" >
-    id, user_id, receiver_name, receiver_phone, receiver_mobile, receiver_province, receiver_city, 
+    id, user_id, receiver_name, receiver_phone, receiver_mobile, receiver_province, receiver_city,
     receiver_district, receiver_address, receiver_zip, create_time, update_time
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from mmall_shipping
     where id = #{id,jdbcType=INTEGER}
@@ -32,14 +32,14 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.mmall.pojo.Shipping" >
-    insert into mmall_shipping (id, user_id, receiver_name, 
-      receiver_phone, receiver_mobile, receiver_province, 
-      receiver_city, receiver_district, receiver_address, 
+    insert into mmall_shipping (id, user_id, receiver_name,
+      receiver_phone, receiver_mobile, receiver_province,
+      receiver_city, receiver_district, receiver_address,
       receiver_zip, create_time, update_time
       )
-    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{receiverName,jdbcType=VARCHAR}, 
-      #{receiverPhone,jdbcType=VARCHAR}, #{receiverMobile,jdbcType=VARCHAR}, #{receiverProvince,jdbcType=VARCHAR}, 
-      #{receiverCity,jdbcType=VARCHAR}, #{receiverDistrict,jdbcType=VARCHAR}, #{receiverAddress,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{receiverName,jdbcType=VARCHAR},
+      #{receiverPhone,jdbcType=VARCHAR}, #{receiverMobile,jdbcType=VARCHAR}, #{receiverProvince,jdbcType=VARCHAR},
+      #{receiverCity,jdbcType=VARCHAR}, #{receiverDistrict,jdbcType=VARCHAR}, #{receiverAddress,jdbcType=VARCHAR},
       #{receiverZip,jdbcType=VARCHAR},now(),now()
       )
   </insert>
