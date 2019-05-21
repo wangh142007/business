@@ -12,15 +12,14 @@ import com.mmall.pojo.Category;
 import com.mmall.pojo.Product;
 import com.mmall.service.ICategoryService;
 import com.mmall.service.IProductService;
-import com.mmall.until.DateTimeUtil;
-import com.mmall.until.PropertiesUtil;
+import com.mmall.util.DateTimeUtil;
+import com.mmall.util.PropertiesUtil;
 import com.mmall.vo.ProductDetailVo;
 import com.mmall.vo.ProductListVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.naming.ldap.PagedResultsControl;
 import java.util.ArrayList;
 import java.util.List;
 
