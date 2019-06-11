@@ -214,4 +214,20 @@
     from mmall_order
     where order_no = #{orderNo}
   </select>
+
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="int">
+    select
+    <include refid="Base_Column_List"></include>
+    from mmall_order
+    where user_id=#{userId}
+    ORDER BY create_time desc
+  </select>
+
+  <select id="selectAllOrder" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"></include>
+    from mmall_order
+    ORDER BY create_time desc
+
+  </select>
 </mapper>
